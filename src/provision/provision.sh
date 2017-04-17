@@ -24,7 +24,8 @@ start="$(date +%s)"
 
 echo "-----------------------------"
 echo "Installing libraries..."
-apt-get -y install cmake g++ git pkg-config libglew-dev
+apt-get -y install cmake g++ git pkg-config mesa-common-dev
+apt-get -y install freeglut3 freeglut3-dev libglew1.6 libglew1.6-dev libglu1-mesa libglu1-mesa-dev libgl1-mesa-glx libgl1-mesa-dev
 
 echo "-----------------------------"
 echo "Installing software..."
