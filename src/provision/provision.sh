@@ -17,16 +17,27 @@
 #==============================================================================
 
 echo "+----------------------------------------+"
-echo "| Provisioning Linux Desktop Environment |"
+echo "| Provisioning Environment               |"
 echo "+----------------------------------------+"
 
 start="$(date +%s)"
 
-## TODO: Copy this as 'provison' for vagrant desktop
+echo "-----------------------------"
+echo "Installing libraries..."
+apt-get -y install cmake g++ git pkg-config libglew-dev
+
+echo "-----------------------------"
+echo "Installing software..."
+add-apt-repository ppa:eugenesan/ppa -y
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add - 
+sh -c 'echo "deb https://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
+
+apt-get -y update
+apt-get -y install smartgithg firefox google-chrome-stable
 
 end="$(date +%s)"
 echo "-----------------------------"
 echo "Provisioning complete in "$(expr $end - $start)" seconds"
 echo "+---------------------------------------+"
-echo "| Linux Desktop Environment Provisioned |"
+echo "| Environment Provisioned               |"
 echo "+---------------------------------------+"
