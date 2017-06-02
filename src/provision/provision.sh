@@ -1,30 +1,10 @@
 #!/bin/bash
-#=============================================================================
-#
-#          FILE:  provision.sh
-#
-#         USAGE:  ./provision.sh
-#
-#   DESCRIPTION: The primary provisioning script for the linux desktop 
-#       environment.  It setups the desktop to use have the necessary 
-#       components for a good user experience.  
-#
-#       OPTIONS:  ---
-#  REQUIREMENTS:  ---
-#         NOTES:  ---
-#        AUTHOR:  jrbeverly
-#
-#==============================================================================
-
-echo "+----------------------------------------+"
-echo "| Provisioning Environment               |"
-echo "+----------------------------------------+"
-
 start="$(date +%s)"
 
+echo "Provisioning Environment"
 echo "-----------------------------"
 echo "Installing libraries..."
-apt-get -y install cmake g++ git pkg-config mesa-common-dev
+apt-get -y install cmake make g++ git pkg-config mesa-common-dev
 apt-get -y install freeglut3 freeglut3-dev libglew1.6 libglew1.6-dev libglu1-mesa libglu1-mesa-dev libgl1-mesa-glx libgl1-mesa-dev
 
 echo "-----------------------------"
@@ -39,6 +19,3 @@ apt-get -y install smartgithg firefox google-chrome-stable
 end="$(date +%s)"
 echo "-----------------------------"
 echo "Provisioning complete in "$(expr $end - $start)" seconds"
-echo "+---------------------------------------+"
-echo "| Environment Provisioned               |"
-echo "+---------------------------------------+"
