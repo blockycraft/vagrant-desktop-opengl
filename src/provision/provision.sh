@@ -6,6 +6,8 @@ echo "-----------------------------"
 echo "Installing libraries..."
 apt-get -y install cmake make g++ git pkg-config mesa-common-dev
 apt-get -y install freeglut3 freeglut3-dev libglew1.6 libglew1.6-dev libglu1-mesa libglu1-mesa-dev libgl1-mesa-glx libgl1-mesa-dev
+apt-get -y install premake4 libcr-dev
+apt-get -y install mesa-common-dev libglu1-mesa-dev libxrandr-dev libxi-dev libxcursor-dev libx11-dev libxinerama-dev
 
 echo "-----------------------------"
 echo "Installing software..."
