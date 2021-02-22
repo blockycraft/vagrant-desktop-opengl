@@ -1,0 +1,20 @@
+{
+  "slug": "vagrant-desktop-opengl",
+  "namespace": "blockycraft",
+  "status": "archived",
+  "icon": "icon.svg",
+  "license": {
+    "type": "MIT",
+    "content": "Jonathan Beverly <jrbeverly>"
+  },
+  "topics": [
+    "vagrant",
+    "shell",
+    "opengl",
+    "virtualbox",
+    "desktop-environment"
+  ],
+  "languages": [
+    "Shell"
+  ]
+}
