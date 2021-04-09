@@ -1,0 +1,18 @@
+slug: vagrant-desktop-opengl
+description: '[DEPRECATED] A base OpenGL Desktop environment, sandboxed on your local computer.'
+project: blockycraft
+namespace: env
+status: archived
+icon: icon.svg
+license:
+  type: MIT
+  content: Jonathan Beverly <jrbeverly>
+  year: 2017
+topics: |-
+  [
+    "vagrant",
+    "shell",
+    "opengl",
+    "virtualbox",
+    "desktop-environment"
+  ]
